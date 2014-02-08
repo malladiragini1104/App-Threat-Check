@@ -46,14 +46,12 @@ namespace APM
 				if (items.Count > 0){
 					foreach (PackageInfo p in items) {
 						ApplicationInfo a = p.ApplicationInfo;
-						if (a.Flags.HasFlag (ApplicationInfoFlags.System)) {
-							name = p.PackageName.Replace ("com.android.", "");
-							name = string.Format ("{0},{1}", "S", name);
-						} else {
-							name = p.PackageName.Replace ("com.anroid.", "");
-							name = string.Format ("{0},{1}", "I", name);
+						if (!a.Flags.HasFlag (ApplicationInfoFlags.System)) {
+							//name = p.PackageName.Replace ("com.android.", "");
+							var appName = p.ApplicationInfo.LoadLabel (PackageManager).ToString();
+							//itemsName.Add (name);
+							itemsName.Add (appName);
 						}
-						itemsName.Add (name);
 
 
 					}
