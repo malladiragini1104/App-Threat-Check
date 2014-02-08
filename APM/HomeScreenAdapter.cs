@@ -37,9 +37,10 @@ namespace APM
 		{
 			View view = convertView; // re-use an existing view, if one is available
 			if (view == null) // otherwise create a new one
-				view = context.LayoutInflater.Inflate(Android.Resource.Layout.ActivityListItem, null);
-			view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = items[position].AppName;
-			view.FindViewById<ImageView> (Android.Resource.Id.Icon).SetBackgroundDrawable (items [position].Icon);
+				view = context.LayoutInflater.Inflate(APM.Resource.Layout.CustomView, null);
+				
+			view.FindViewById<TextView>(APM.Resource.Id.Text1).Text = items[position].AppName;
+			view.FindViewById<ImageView> (APM.Resource.Id.Image).SetImageDrawable (items [position].Icon);
 			return view;
 		}
 	}
