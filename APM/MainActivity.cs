@@ -41,12 +41,18 @@ namespace APM
 			//items = pm.GetInstalledApplications (PackageInfoFlags.Activities);
 			//items = PackageManager.GetInstalledPackages (1) as List<PackageInfo>;
 			IList<PackageInfo> items = PackageManager.GetInstalledPackages (0); 
-
+			string name = string.Empty;
 			if (items != null) {
 				if (items.Count > 0){
 					foreach (PackageInfo p in items) {
 						ApplicationInfo a = p.ApplicationInfo;
-						var name = p.PackageName.Replace ("com.android.", "");
+						if (a.Flags.HasFlag (ApplicationInfoFlags.System)) {
+							name = p.PackageName.Replace ("com.android.", "");
+							name = string.Format ("{0},{1}", "S", name);
+						} else {
+							name = p.PackageName.Replace ("com.anroid.", "");
+							name = string.Format ("{0},{1}", "I", name);
+						}
 						itemsName.Add (name);
 
 
