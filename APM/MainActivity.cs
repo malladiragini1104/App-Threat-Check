@@ -31,44 +31,7 @@ namespace APM
 		}
 	}
 
-	[Activity(Label = "Second Screen", MainLauncher = false)]
-	public class SecondActivity : ListActivity {
-		List<String> itemsName = new List<string> ();
-		protected override void OnCreate(Bundle bundle)
-		{
-			base.OnCreate(bundle);
-			//items = pm.GetInstalledApplications (PackageInfoFlags.MetaData) as List<ApplicationInfo>;
-			//items = pm.GetInstalledApplications (PackageInfoFlags.Activities);
-			//items = PackageManager.GetInstalledPackages (1) as List<PackageInfo>;
-			IList<PackageInfo> items = PackageManager.GetInstalledPackages (0); 
-			string name = string.Empty;
-			if (items != null) {
-				if (items.Count > 0){
-					foreach (PackageInfo p in items) {
-						ApplicationInfo a = p.ApplicationInfo;
-						if (!a.Flags.HasFlag (ApplicationInfoFlags.System)) {
-							//name = p.PackageName.Replace ("com.android.", "");
-							var appName = p.ApplicationInfo.LoadLabel (PackageManager).ToString();
-							//itemsName.Add (name);
-							itemsName.Add (appName);
-						}
 
-
-					}
-					ListAdapter = new ArrayAdapter<String> (this, Android.Resource.Layout.SimpleListItem1,itemsName);
-			}
-				else
-					NoApplicationFound ();
-			} else
-				NoApplicationFound ();
-		}
-
-		private void NoApplicationFound(){
-			List<string> items = new List<string> ();
-			items.Add ("No Application Found");
-			ListAdapter = new ArrayAdapter<String> (this, Android.Resource.Layout.SimpleListItem1, items);
-		}
-	}
 		
 }
 
