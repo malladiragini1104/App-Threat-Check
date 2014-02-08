@@ -30,9 +30,6 @@ namespace APM
 			SetContentView (layout);
 		}
 	}
-
-
-		
-}
+ }
 
 

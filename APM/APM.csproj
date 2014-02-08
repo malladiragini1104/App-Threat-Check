@@ -67,6 +67,7 @@
     <AndroidResource Include="Resources\layout\CustomView.axml" />
     <AndroidResource Include="Resources\layout\ThirdScreen.axml" />
     <AndroidResource Include="Resources\layout\CustomThirdScreenView.axml" />
+    <AndroidResource Include="Resources\drawable\Contacts.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>

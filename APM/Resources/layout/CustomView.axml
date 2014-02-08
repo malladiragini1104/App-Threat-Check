@@ -17,13 +17,6 @@
             android:textColor="#FF7F3300"
             android:textSize="20dip"
             android:textStyle="italic" />
-        <TextView
-            android:id="@+id/Text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14dip"
-            android:textColor="#FF267F00"
-            android:paddingLeft="100dip" />
     </LinearLayout>
     <ImageView
         android:id="@+id/Image"
@@ -32,4 +25,42 @@
         android:padding="5dp"
         android:src="@drawable/icon"
         android:layout_alignParentRight="true" />
+    <LinearLayout
+        android:id="@+id/Text"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dip">
+        <ImageView
+            android:id="@+id/PImage1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:padding="2dp"
+            android:layout_toRightOf="@+id/PImage1"
+            android:src="@drawable/icon" />
+        <ImageView
+            android:id="@+id/PImage2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:padding="2dp"
+            android:src="@drawable/icon" />
+        <ImageView
+            android:id="@+id/PImage3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="2dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/icon"
+            android:layout_toRightOf="@+id/PImage2" />
+        <ImageView
+            android:id="@+id/PImage4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="2dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/icon"
+            android:layout_toRightOf="@+id/PImage3" />
+    </LinearLayout>
 </RelativeLayout>

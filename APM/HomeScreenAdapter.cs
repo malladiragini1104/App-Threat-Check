@@ -41,6 +41,10 @@ namespace APM
 				
 			view.FindViewById<TextView>(APM.Resource.Id.Text1).Text = items[position].AppName;
 			view.FindViewById<ImageView> (APM.Resource.Id.Image).SetImageDrawable (items [position].Icon);
+			view.FindViewById<ImageView> (APM.Resource.Id.PImage1).SetImageResource (APM.Resource.Drawable.Contacts);
+			view.FindViewById<ImageView> (APM.Resource.Id.PImage2).SetImageResource (APM.Resource.Drawable.Contacts);
+			view.FindViewById<ImageView> (APM.Resource.Id.PImage3).SetImageResource (APM.Resource.Drawable.Contacts);
+			view.FindViewById<ImageView> (APM.Resource.Id.PImage4).SetWillNotDraw (true);
 			return view;
 		}
 	}
