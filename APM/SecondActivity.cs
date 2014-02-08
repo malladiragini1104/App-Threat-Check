@@ -28,10 +28,12 @@ namespace APM
 						ApplicationInfo a = p.ApplicationInfo;
 						if (!a.Flags.HasFlag (ApplicationInfoFlags.System)) {
 							//name = p.PackageName.Replace ("com.android.", "");
+
 							var appName = p.ApplicationInfo.LoadLabel (PackageManager).ToString();
 							var appIcon = p.ApplicationInfo.LoadIcon (PackageManager);
 							//itemsName.Add (name);
 							Apps.Add (new Application{
+								Package = p,
 								AppName = appName,
 								Icon = appIcon
 							});
@@ -46,8 +48,28 @@ namespace APM
 		}
 		protected override void OnListItemClick(ListView l, View v, int position, long id)
 		{
-			var t = Apps[position];
-			Android.Widget.Toast.MakeText(this, t.AppName, Android.Widget.ToastLength.Short).Show();
+			var app = Apps[position];
+			Android.Widget.Toast.MakeText(this, app.AppName, Android.Widget.ToastLength.Short).Show();
+			//send app details to third screen
+			Bundle bun = new Bundle();
+			bun.PutSerializable("Apps",app);  
+			Intent intent = new Intent(this,typeof(ThirdActivity));
+		
+			intent.PutExtras(bun);
+			StartActivity (intent);
+			/*
+                       var intent = new Intent(this.BaseContext, new HelloTabWidget().Class); 
+                       intent.AddFlags(ActivityFlags.NewTask); 
+
+                       Bundle bun = new Bundle(); 
+                       *bun.PutSerializable("test", (BaseData)dat);  * 
+
+                       intent.PutExtras(bun); 
+                      StartActivity(intent);
+			*/
+
+
+
 		}
 
 		private void NoApplicationFound(){

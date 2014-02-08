@@ -52,6 +52,7 @@
     <Compile Include="SecondActivity.cs" />
     <Compile Include="HomeScreenAdapter.cs" />
     <Compile Include="Application.cs" />
+    <Compile Include="ThirdActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
