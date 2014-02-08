@@ -1,11 +1,16 @@
 using System;
+using System.Collections.Generic;
 
 namespace APM
 {
-	public class StaticWeightage
+	public static class StaticWeightage
 	{
-		public StaticWeightage ()
-		{
+		StaticWeightage(){
+			Permis
+		}
+		public List<PermissionMapping> MyProperty {
+			get;
+			set;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 using System;
+using Android.Graphics.Drawables;
 
 namespace APM
 {
@@ -19,6 +20,12 @@ namespace APM
 			get;
 			set;
 		}
+
+		public Drawable Icon {
+			get;
+			set;
+		}
+
 	}
 }
 

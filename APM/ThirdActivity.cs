@@ -74,7 +74,7 @@ namespace APM
 			return new APM.Application();
 		}
 
-		object GetPermissions (APM.Application application)
+		List<Permission> GetPermissions (APM.Application application)
 		{
 			var permissionList = new List<Permission> ();
 			var permissionItems = application.Package.Permissions;
@@ -84,8 +84,14 @@ namespace APM
 					Icon = permission.LoadIcon(PackageManager)
 				});
 			}
-
+			SetWeightageForPermission (permissionList);
+			return permissionList;
 			//write gamma function to map color and weightage against name
+		}
+
+		void SetWeightageForPermission (List<Permission> permissionList)
+		{
+
 		}
 	}
 }
