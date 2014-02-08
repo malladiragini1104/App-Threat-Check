@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace APM
 {
 	[Serializable]
-	public class Application :ISerializable
+	public class Application 
 	{
 		public Application ()
 		{
@@ -19,15 +19,6 @@ namespace APM
 			get;
 			set;
 		}
-
-		#region ISerializable implementation
-
-		public void GetObjectData (SerializationInfo info, StreamingContext context)
-		{
-			throw new NotImplementedException ();
-		}
-
-		#endregion
 	}
 }
 
