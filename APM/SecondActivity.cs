@@ -29,9 +29,11 @@ namespace APM
 						if (!a.Flags.HasFlag (ApplicationInfoFlags.System)) {
 							//name = p.PackageName.Replace ("com.android.", "");
 							var appName = p.ApplicationInfo.LoadLabel (PackageManager).ToString();
+							var appIcon = p.ApplicationInfo.LoadIcon (PackageManager);
 							//itemsName.Add (name);
 							Apps.Add (new Application{
-								AppName = appName
+								AppName = appName,
+								Icon = appIcon
 							});
 						}
 					}
