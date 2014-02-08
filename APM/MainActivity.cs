@@ -33,19 +33,26 @@ namespace APM
 
 	[Activity(Label = "Second Screen", MainLauncher = false)]
 	public class SecondActivity : ListActivity {
-		List<string> items;
+		List<String> itemsName = new List<string> ();
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
-			PackageManager pm = PackageManager;
-			items = pm.GetInstalledApplications (PackageInfoFlags.Activities) as List<string>;
-			Intent mainIntent = new Intent(Intent.Action, null);
-			mainIntent.AddCategory(Intent.CategoryLauncher);
-			List<PackageItemInfo> pkgAppsList = PackageManager.QueryIntentActivities(mainIntent,0) as List<PackageItemInfo>;
+			//items = pm.GetInstalledApplications (PackageInfoFlags.MetaData) as List<ApplicationInfo>;
+			//items = pm.GetInstalledApplications (PackageInfoFlags.Activities);
+			//items = PackageManager.GetInstalledPackages (1) as List<PackageInfo>;
+			IList<PackageInfo> items = PackageManager.GetInstalledPackages (0); 
 
 			if (items != null) {
-				if (items.Count > 0)
-					ListAdapter = new ArrayAdapter<String> (this, Android.Resource.Layout.SimpleListItem1, items);
+				if (items.Count > 0){
+					foreach (PackageInfo p in items) {
+						ApplicationInfo a = p.ApplicationInfo;
+						var name = p.PackageName.Replace ("com.android.", "");
+						itemsName.Add (name);
+
+
+					}
+					ListAdapter = new ArrayAdapter<String> (this, Android.Resource.Layout.SimpleListItem1,itemsName);
+			}
 				else
 					NoApplicationFound ();
 			} else
