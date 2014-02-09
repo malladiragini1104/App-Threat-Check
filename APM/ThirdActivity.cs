@@ -16,7 +16,17 @@ namespace APM
 		Intent intent = new Intent ();
 		ListView listView;
 
-
+		public static Dictionary<string,int> PermissionDictionary = new Dictionary<string,int>() {
+			{"READ_SMS",5 },
+			{"SEND_SMS",4 },
+			{"READ_CONTACTS",5 },
+			{"REBOOT",4 },
+			{"INTERNET",5 },
+			{"ACCESS_COARSE_LOCATION",3 },
+			{"ACCESS_FINE_LOCATION",4 },
+			{"WRITE_EXTERNAL_STORAGE",3 },
+			{"READ_HISTORY_BOOKMARKS",3 }
+		};
 
 		protected override void OnCreate(Bundle bundle)
 		{
@@ -74,13 +84,18 @@ namespace APM
 		{
 			var permissionList = new List<Permission> ();
 			var permissionItems = application.Package.RequestedPermissions;
+			try{
 			foreach (var permission in permissionItems) {
+
 				permissionList.Add (new Permission () {
-					PermissionName = permission.Replace ("android.permission.", "")
+						PermissionName = permission.Replace ("android.permission.", "").Replace("_"," "),
+					
 					                 
 					//Icon = permission.LoadIcon(PackageManager)
 				});
-			}
+				}}
+			catch(Exception e){
+				NullReferenceException nre;}
 			//SetWeightageForPermission (permissionList);
 			return permissionList;
 			//write gamma function to map color and weightage against name
