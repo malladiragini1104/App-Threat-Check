@@ -20,6 +20,7 @@ namespace APM
 			SetContentView(Resource.Layout.HomeScreen);
 
 			CreateTab(typeof(ApplicationActivity), "Application", "Application",0);
+			CreateTab(typeof(FilterActivity), "Filter", "Filter",0);
 		}
 		private void CreateTab(Type activityType, string tag, string label, int drawableId )
 		{
