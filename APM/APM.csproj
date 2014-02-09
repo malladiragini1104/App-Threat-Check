@@ -53,9 +53,10 @@
     <Compile Include="HomeScreenAdapter.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="ThirdActivity.cs" />
-	 <Compile Include="StaticWeightage.cs" />
-	  <Compile Include="PermissionMapping.cs" />
-	   <Compile Include="Permission.cs" />
+    <Compile Include="StaticWeightage.cs" />
+    <Compile Include="PermissionMapping.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="ThirdActivityAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -14,7 +14,7 @@
         android:textStyle="bold"
         android:padding="5dp" />
     <ListView
-        android:id="@+id/List"
+        android:id="@+id/List1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:cacheColorHint="#FFDAFF7F" />
