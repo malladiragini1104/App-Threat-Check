@@ -5,10 +5,10 @@ namespace APM
 {
 	public static class StaticWeightage
 	{
-		StaticWeightage(){
-			Permis
-		}
-		public List<PermissionMapping> MyProperty {
+		static StaticWeightage(){
+			//ermis
+		}	
+			public static List<PermissionMapping> MyProperty {
 			get;
 			set;
 		}
