@@ -56,7 +56,9 @@
     <Compile Include="PermissionMapping.cs" />
     <Compile Include="Permission.cs" />
     <Compile Include="ApplicationActivity.cs" />
-	<Compile Include="ThirdActivityAdapter.cs" />
+    <Compile Include="ThirdActivityAdapter.cs" />
+    <Compile Include="FilterActivity.cs" />
+    <Compile Include="FilterViewAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -73,7 +75,8 @@
     <AndroidResource Include="Resources\layout\CustomThirdScreenView.axml" />
     <AndroidResource Include="Resources\drawable\Contacts.png" />
     <AndroidResource Include="Resources\layout\ApplicationView.axml" />
+    <AndroidResource Include="Resources\layout\FilterBaseView.axml" />
+    <AndroidResource Include="Resources\layout\FilterView.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-
 </Project>
