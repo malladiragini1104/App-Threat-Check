@@ -56,9 +56,9 @@ namespace APM
 			var listView = sender as ListView;
 			var t = Apps[e.Position]; 
 			Android.Widget.Toast.MakeText(this, t.AppName, Android.Widget.ToastLength.Short).Show();
-			//Intent intent = new Intent(this,typeof(ThirdActivity));
-			//intent.PutExtra("appName",t.AppName);
-			//StartActivity (intent);
+			Intent intent = new Intent(this,typeof(ThirdActivity));
+			intent.PutExtra("appName",t.AppName);
+			StartActivity (intent);
 		}
 
 		private void NoApplicationFound(){
