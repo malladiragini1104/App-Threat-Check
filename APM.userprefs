@@ -2,17 +2,15 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="APM\ThirdActivity.cs">
     <Files>
-      <File FileName="APM\MainActivity.cs" Line="27" Column="44" />
-      <File FileName="APM\SecondActivity.cs" Line="80" Column="21" />
-      <File FileName="APM\ThirdActivity.cs" Line="22" Column="1" />
-      <File FileName="APM\HomeScreenAdapter.cs" Line="1" Column="1" />
-      <File FileName="APM\Application.cs" Line="22" Column="1" />
-      <File FileName="APM\Properties\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="APM\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="APM\SecondActivity.cs" Line="28" Column="46" />
+      <File FileName="APM\ThirdActivity.cs" Line="94" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="APM" expanded="True">
+            <Node name="Properties" expanded="True" />
             <Node name="ThirdActivity.cs" selected="True" />
           </Node>
         </State>
@@ -21,10 +19,9 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\mshandilya\Documents\GitHub\HackthonProject\APM\ThirdActivity.cs" line="21" column="1" />
-      <Breakpoint file="C:\Users\mshandilya\Documents\GitHub\HackthonProject\APM\ThirdActivity.cs" line="22" column="1" />
+      <Breakpoint file="C:\Users\mshandilya\Documents\GitHub\HackthonProject\APM\ThirdActivity.cs" line="119" column="1" />
+      <Breakpoint file="C:\Users\mshandilya\Documents\GitHub\HackthonProject\APM\ThirdActivity.cs" line="120" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.APM AndroidDeviceId-Debug="emulator-5554" />
 </Properties>
