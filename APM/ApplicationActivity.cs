@@ -11,6 +11,8 @@ using Android.Content.PM;
 
 namespace APM
 {
+
+
 	[Activity]
 	public class ApplicationActivity : Activity {
 		List<Application> Apps = new List<Application> ();
