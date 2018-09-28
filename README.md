@@ -5,7 +5,7 @@ Title: App Threat Check. (Android)
 Team Details:
 Team Name:Ragini team 
 1. Rishitha
-2. Raghini
+2. Ragini
 3. Yashwitha
 
 
