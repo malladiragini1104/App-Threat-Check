@@ -3,10 +3,11 @@ HackthonProject
 Title: App Threat Check. (Android) 
 
 Team Details:
-Team Name:Bazinga
-1.Shashank Thakare
-2.Manvesh Shandiliya
-3.Pawan Gangad
+Team Name:Ragini team 
+1. Rishitha
+2. Raghini
+3. Yashwitha
+
 
 Brief Idea:
 1.Our App informs users about the security threat posed by its installed apps.
